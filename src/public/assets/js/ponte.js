@@ -4,6 +4,14 @@ document.addEventListener('DOMContentLoaded', () => {
     lucide.createIcons();
   }
 
+  // Verifica se o acesso está sendo feito abrindo o arquivo localmente
+  if (window.location.protocol === 'file:') {
+    const warningBanner = document.getElementById('protocolWarning');
+    if (warningBanner) {
+      warningBanner.classList.remove('hidden');
+    }
+  }
+
   const qrCodeForm = document.getElementById('qrCodeForm');
   const submitBtn = document.getElementById('submitBtn');
   const btnText = submitBtn.querySelector('.btn-text');

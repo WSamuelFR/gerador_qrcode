@@ -297,4 +297,45 @@ h1 span {
   height: 100%;
   object-fit: contain;
   display: block;
-}
+}
+
+/* Utility classes */
+.hidden {
+  display: none !important;
+}
+
+/* Warning Banner for file:// protocol */
+.warning-banner {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  color: #f87171;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.warning-banner a {
+  color: #60a5fa;
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 1px dashed #60a5fa;
+  transition: color 0.2s;
+}
+
+.warning-banner a:hover {
+  color: #93c5fd;
+  border-bottom-style: solid;
+}
+
+.warning-banner i {
+  flex-shrink: 0;
+  stroke: #f87171;
+  width: 20px;
+  height: 20px;
+}
+
